@@ -1,0 +1,21 @@
+global:
+routers:
+  receiver: Default
+  group_by: ['alertname']
+  group_wait: 15s #Definir um tempo de acordo com políticas estabelecidas pela administração
+  group_interval: 15s
+  repeat_interval: 1m
+
+  routers:
+  - receiver: AlertaWebApi
+    match:
+      team: mongodb
+
+  - receiver: AlertaDataBase
+    match:
+      team: webapi
+
+  receivers: 
+  - name: default
+    webhool=k_configs:
+    - url: 'https://pruu.herokuapp.com/dump/wpwebhookdefault'
