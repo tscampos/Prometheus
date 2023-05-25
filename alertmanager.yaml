@@ -14,8 +14,8 @@ routers:
   - receiver: AlertaDataBase
     match:
       team: webapi
-
-  receivers: 
-  - name: default
-    webhool=k_configs:
-    - url: 'https://pruu.herokuapp.com/dump/wpwebhookdefault'
+# SITE PRUU FORA DURANTE TESTES DA AULA
+#  receivers: 
+#  - name: default
+#    webhool=k_configs:
+#    - url: 'https://pruu.herokuapp.com/dump/wpwebhookdefault'
